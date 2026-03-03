@@ -37,5 +37,5 @@ export default function SmoothScroll({
     };
   }, []);
 
-  return <>{children}</>;
+  return <div className="overflow-x-hidden!">{children}</div>;
 }
