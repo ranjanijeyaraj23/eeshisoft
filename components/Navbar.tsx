@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, useScroll, useMotionValueEvent } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -16,6 +16,18 @@ const navLinks = [
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [hidden, setHidden] = useState(false);
+
+  const { scrollY } = useScroll();
+
+  useMotionValueEvent(scrollY, "change", (latest) => {
+    const previous = scrollY.getPrevious() ?? 0;
+    if (latest > previous && latest > 150) {
+      setHidden(true);
+    } else {
+      setHidden(false);
+    }
+  });
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
@@ -40,13 +52,20 @@ const Navbar = () => {
 
   return (
     <>
-      <header
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      <motion.header
+        variants={{
+          visible: { y: 0, opacity: 1 },
+          hidden: { y: "-100%", opacity: 0 },
+        }}
+        animate={hidden && !mobileOpen ? "hidden" : "visible"}
+        transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
+        className={`fixed top-0 left-0 right-0 z-50 transition-colors duration-500 ${
           scrolled
             ? "border-b border-[rgba(255,255,255,0.06)] bg-[rgba(10,10,10,0.8)] backdrop-blur-xl"
             : "bg-transparent"
         }`}
       >
+
         <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
           <Link
             href="/"
@@ -97,7 +116,7 @@ const Navbar = () => {
             )}
           </button>
         </nav>
-      </header>
+      </motion.header>
 
       {/* Mobile menu */}
       <AnimatePresence>
