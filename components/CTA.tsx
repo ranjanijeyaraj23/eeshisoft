@@ -106,8 +106,8 @@ export default function CTA() {
             lineHeight: 1.1,
           }}
         >
-          Let's Build the <span className="gradient-text">Future of Web3</span>{" "}
-          Together
+          Let&apos;s Build the{" "}
+          <span className="gradient-text">Future of Web3</span> Together
         </h2>
 
         <p

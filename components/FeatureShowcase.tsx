@@ -16,7 +16,7 @@ const FeatureShowcase = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section className="relative overflow-hidden py-24 md:py-32">
+    <section className="relative overflow-hidden pt-10 pb-24 md:pb-32">
       {/* Subtle background gradient */}
       <div
         className="pointer-events-none absolute inset-0 opacity-30"

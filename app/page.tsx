@@ -1,4 +1,3 @@
-import SmoothScroll from "@/components/SmoothScroll";
 import CursorGlow from "@/components/CursorGlow";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
@@ -12,7 +11,7 @@ import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
-    <SmoothScroll>
+    <>
       <CursorGlow />
       <Navbar />
       <main>
@@ -25,6 +24,6 @@ export default function Home() {
         <CTA />
       </main>
       <Footer />
-    </SmoothScroll>
+    </>
   );
 }

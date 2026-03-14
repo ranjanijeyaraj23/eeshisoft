@@ -44,93 +44,32 @@ const services = [
 
 export default function Services() {
   return (
-    <section
-      id="services"
-      className="section-pad"
-      style={{ background: "#0A0A0A", position: "relative" }}
-    >
-      {/* Section bg accent */}
-      <div
-        style={{
-          position: "absolute",
-          top: "10%",
-          right: "-10%",
-          width: 500,
-          height: 500,
-          borderRadius: "50%",
-          background:
-            "radial-gradient(circle, rgba(255,234,84,0.06) 0%, transparent 70%)",
-          filter: "blur(40px)",
-          pointerEvents: "none",
-        }}
-      />
-
-      <div style={{ maxWidth: 1200, margin: "0 auto", padding: "0 24px" }}>
-        {/* Header */}
+    <section id="services" className="section-pad bg-[#0A0A0A] relative">
+      <div className="max-w-[1200px] mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.7 }}
-          style={{ textAlign: "center", marginBottom: 72 }}
+          className="text-center mb-18"
         >
-          <div
-            style={{
-              display: "inline-flex",
-              alignItems: "center",
-              gap: 8,
-              borderRadius: 100,
-              padding: "5px 14px",
-              marginBottom: 20,
-              border: "1px solid rgba(255,234,84,0.2)",
-              background: "rgba(255,234,84,0.05)",
-            }}
-          >
-            <span
-              style={{
-                fontSize: "0.75rem",
-                color: "#FFEA54",
-                fontWeight: 600,
-                letterSpacing: "0.07em",
-                textTransform: "uppercase",
-              }}
-            >
+          <div className="inline-flex items-center gap-2 rounded-full py-[5px] px-[14px] mb-5 border border-[rgba(255,234,84,0.2)] bg-[rgba(255,234,84,0.05)]">
+            <span className="text-xs text-[#FFEA54] font-semibold tracking-[0.07em] uppercase">
               What We Build
             </span>
           </div>
-          <h2
-            style={{
-              fontSize: "clamp(1.8rem, 4vw, 3rem)",
-              fontWeight: 800,
-              letterSpacing: "-0.03em",
-              marginBottom: 16,
-            }}
-          >
+          <h2 className="text-[clamp(1.8rem,4vw,3rem)] font-extrabold tracking-[-0.03em] mb-4">
             Enterprise-Grade{" "}
             <span className="gradient-text">Web3 Services</span>
           </h2>
-          <p
-            style={{
-              color: "#A1A1AA",
-              maxWidth: 520,
-              margin: "0 auto",
-              lineHeight: 1.7,
-              fontSize: "1.02rem",
-            }}
-          >
+          <p className="text-[#A1A1AA] max-w-[520px] mx-auto leading-[1.7] text-[1.02rem]">
             From protocol design to production launch - we deliver the full
             stack of decentralized infrastructure.
           </p>
         </motion.div>
 
         {/* Grid */}
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
-            gap: 20,
-          }}
-        >
+        <div className="grid grid-cols-[repeat(auto-fit,minmax(320px,1fr))] gap-5">
           {services.map((service, i) => {
             const Icon = service.icon;
             return (
@@ -145,71 +84,28 @@ export default function Services() {
                   ease: [0.16, 1, 0.3, 1],
                 }}
                 whileHover={{ y: -6, transition: { duration: 0.25 } }}
-                className="gradient-border-card"
-                style={{
-                  borderRadius: 20,
-                  padding: "32px",
-                  background: "rgba(255,255,255,0.03)",
-                  cursor: "default",
-                  position: "relative",
-                  overflow: "hidden",
-                  transition: "box-shadow 0.3s",
-                }}
-                onMouseEnter={(e) => {
-                  (e.currentTarget as HTMLElement).style.boxShadow =
-                    `0 20px 60px rgba(0,0,0,0.4), 0 0 0 1px rgba(255,234,84,0.12)`;
-                }}
-                onMouseLeave={(e) => {
-                  (e.currentTarget as HTMLElement).style.boxShadow = "none";
-                }}
+                className="gradient-border-card rounded-[20px] p-8 bg-[rgba(255,255,255,0.03)] cursor-default relative overflow-hidden transition-shadow duration-300 hover:shadow-[0_20px_60px_rgba(0,0,0,0.4),0_0_0_1px_rgba(255,234,84,0.12)]"
               >
-                {/* Icon */}
                 <div
+                  className="w-[52px] h-[52px] rounded-xl flex items-center justify-center mb-6"
                   style={{
-                    width: 52,
-                    height: 52,
-                    borderRadius: 14,
                     background: `rgba(${service.color === "#FFEA54" ? "255,234,84" : service.color === "#FEAA2B" ? "254,170,43" : service.color === "#FF5757" ? "255,87,87" : "255,203,60"},0.12)`,
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    marginBottom: 24,
                   }}
                 >
                   <Icon size={24} color={service.color} />
                 </div>
 
-                <h3
-                  style={{
-                    fontSize: "1.08rem",
-                    fontWeight: 700,
-                    marginBottom: 12,
-                    letterSpacing: "-0.01em",
-                  }}
-                >
+                <h3 className="text-[1.08rem] font-bold mb-3 tracking-[-0.01em]">
                   {service.title}
                 </h3>
-                <p
-                  style={{
-                    color: "#A1A1AA",
-                    lineHeight: 1.65,
-                    fontSize: "0.9rem",
-                  }}
-                >
+                <p className="text-[#A1A1AA] leading-[1.65] text-[0.9rem]">
                   {service.desc}
                 </p>
 
-                {/* Corner glow */}
                 <div
+                  className="absolute -bottom-[30px] -right-[30px] w-[120px] h-[120px] rounded-full pointer-events-none"
                   style={{
-                    position: "absolute",
-                    bottom: -30,
-                    right: -30,
-                    width: 120,
-                    height: 120,
-                    borderRadius: "50%",
                     background: `radial-gradient(circle, ${service.color}18 0%, transparent 70%)`,
-                    pointerEvents: "none",
                   }}
                 />
               </motion.div>

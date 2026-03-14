@@ -102,7 +102,7 @@ function TimelineStep({
 
 const ProcessTimeline = () => {
   return (
-    <section id="process" className="relative py-24 md:py-32">
+    <section id="process" className="relative py-24 md:pt-32">
       <div className="mx-auto max-w-6xl px-6">
         <div className="flex flex-col items-start gap-16 lg:flex-row">
           {/* Left side - header */}
