@@ -9,6 +9,8 @@ import FeatureShowcase from "@/components/FeatureShowcase";
 import WhyChooseUs from "@/components/WhyChooseUs";
 import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
+import Projects from "@/components/Projects";
+import Contact from "@/components/Contact";
 
 export default function Home() {
   return (
@@ -20,12 +22,13 @@ export default function Home() {
         <TechMarquee />
         <Services />
         <ProcessTimeline />
+        <Projects />
         <FeatureShowcase />
         <WhyChooseUs />
+        <Contact />
         <CTA />
       </main>
       <Footer />
     </SmoothScroll>
   );
-
 }
