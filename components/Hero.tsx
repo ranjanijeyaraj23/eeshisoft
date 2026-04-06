@@ -3,15 +3,12 @@
 import { motion } from "framer-motion";
 import { ArrowRight, Play } from "lucide-react";
 import GradientBackground from "./GradientBackground";
-import InteractiveHeroBackground from "./InteractiveHeroBackground";
 
 const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Soft gradient blobs */}
       <GradientBackground />
-      {/* Interactive cursor-reactive dot grid */}
-      {/* <InteractiveHeroBackground /> */}
 
       <div className="relative z-10 container mx-auto px-6 text-center">
         <motion.div
@@ -54,14 +51,20 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.45, ease: [0.22, 1, 0.36, 1] }}
         >
-          <button className="group relative px-8 py-4 rounded-xl bg-linear-to-br from-[#ffea54] via-[#ffcb3c] to-[#ff5757] font-semibold text-gray-900 transition-all duration-300 hover:scale-105 glow-primary flex items-center gap-2">
+          <a
+            href="#contact"
+            className="group relative px-8 py-4 rounded-xl bg-linear-to-br from-[#ffea54] via-[#ffcb3c] to-[#ff5757] font-semibold text-gray-900 transition-all duration-300 hover:scale-105 glow-primary flex items-center gap-2"
+          >
             Start Building
             <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-          </button>
-          <button className="group px-8 py-4 rounded-xl glass-card font-medium text-white transition-all duration-300 hover:scale-105 flex items-center gap-2">
+          </a>
+          <a
+            href="#projects"
+            className="group px-8 py-4 rounded-xl glass-card font-medium text-white transition-all duration-300 hover:scale-105 flex items-center gap-2"
+          >
             <Play className="w-4 h-4" />
             View Our Work
-          </button>
+          </a>
         </motion.div>
       </div>
 

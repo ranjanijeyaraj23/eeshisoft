@@ -14,8 +14,8 @@ export const metadata: Metadata = {
   description:
     "Powering Web3 infrastructure with cutting-edge blockchain development, AI integration, and decentralized application engineering.",
   robots: {
-    index: false,
-    follow: false,
+    index: true,
+    follow: true,
   },
   // generator: "v0.app",
   // icons: {

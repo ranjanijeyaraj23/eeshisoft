@@ -9,8 +9,8 @@ import Link from "next/link";
 const navLinks = [
   { label: "Services", href: "#services" },
   { label: "Process", href: "#process" },
-  { label: "About", href: "#" },
-  { label: "Blog", href: "#" },
+  { label: "Projects", href: "#projects" },
+  { label: "Contact", href: "#contact" },
 ];
 
 const Navbar = () => {
@@ -96,10 +96,10 @@ const Navbar = () => {
               </a>
             ))}
             <a
-              href="#"
+              href="#contact"
               className="inline-flex items-center rounded-lg bg-linear-to-br from-[#ffea54] via-[#ffcb3c] to-[#ff5757] px-5 py-2 text-sm font-semibold text-gray-900 transition-all duration-300 hover:opacity-90"
             >
-              Contact
+              Get Started
             </a>
           </div>
 
@@ -162,11 +162,11 @@ const Navbar = () => {
                 </div>
                 <div className="mt-auto pt-6">
                   <a
-                    href="#"
+                    href="#contact"
                     className="flex w-full items-center justify-center rounded-lg bg-linear-to-br from-[#ffea54] via-[#ffcb3c] to-[#ff5757] px-5 py-3 text-sm font-semibold text-gray-900 transition-all duration-300 hover:opacity-90 glow-primary"
                     onClick={() => setMobileOpen(false)}
                   >
-                    Contact
+                    Get Started
                   </a>
                 </div>
               </div>
