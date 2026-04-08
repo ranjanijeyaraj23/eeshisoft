@@ -15,6 +15,48 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+  slug: "ai-lead-generation",
+  title: "AI Lead Generation",
+  description:
+    "AI workforce automation platform that deploys AI employees across WhatsApp, voice calls, website chat, Instagram, and Facebook — running 24/7 to automate sales, support, and operations.",
+  longDescription:
+    "AI Lead Generation is an AI workforce automation platform that lets businesses deploy AI employees across WhatsApp, voice calls, website chat, Instagram, and Facebook — running 24/7. It automates sales, support, and operations from one unified platform. AI voice agents handle outbound and inbound calls, book meetings, and take actions around the clock. The platform delivers a 5x conversion lift and operates across 100+ countries, making it a powerful solution for businesses looking to scale customer engagement without scaling headcount.",
+
+  tech: ["Next.js", "React", "Node.js", "AI/ML", "NLP", "WhatsApp API", "Voice AI"],
+
+  type: "SAAS",
+
+  image: "/ai-lead-generation.png",
+
+  link: "https://marketing.tronex.ai",
+
+  features: [
+    "AI employees deployed across WhatsApp, Instagram, Facebook, and website chat",
+    "AI voice agents for outbound and inbound calls with 24/7 availability",
+    "Automated meeting booking and calendar management via AI agents",
+    "Multi-channel sales automation from a single unified platform",
+    "AI-powered customer support with instant response across all channels",
+    "Operations automation with intelligent workflow orchestration",
+    "5x conversion lift with AI-driven lead engagement",
+    "Global reach across 100+ countries with multilingual support",
+    "Real-time analytics dashboard for tracking agent performance and ROI",
+    "Seamless integrations with CRM, helpdesk, and third-party tools"
+  ],
+
+  challenge:
+    "Businesses needed to engage customers 24/7 across multiple channels — WhatsApp, voice, Instagram, Facebook, and web chat — but scaling human teams across time zones and languages was expensive and unsustainable.",
+
+  solution:
+    "We built an AI workforce platform that deploys AI employees across every major communication channel. These AI agents handle sales conversations, support queries, outbound calls, and meeting bookings autonomously — operating 24/7 across 100+ countries from a single platform, delivering a 5x conversion lift while dramatically reducing operational costs.",
+
+  results: [
+    { label: "Conversion Lift", value: "5x" },
+    { label: "Countries", value: "100+" },
+    { label: "Availability", value: "24/7" },
+    { label: "Channels", value: "5+" }
+  ],
+},
+  {
     slug: "dehack-web3",
     title: "Dehack Web3",
     description:
