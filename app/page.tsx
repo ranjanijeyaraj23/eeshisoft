@@ -1,5 +1,5 @@
-import SmoothScroll from "@/components/SmoothScroll";
-import CursorGlow from "@/components/CursorGlow";
+// import SmoothScroll from "@/components/SmoothScroll";
+// import CursorGlow from "@/components/CursorGlow";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import TechMarquee from "@/components/TechMarquee";
@@ -14,8 +14,9 @@ import Contact from "@/components/Contact";
 
 export default function Home() {
   return (
-    <SmoothScroll>
-      <CursorGlow />
+    // <SmoothScroll>
+      // <CursorGlow />
+      <>
       <Navbar />
       <main>
         <Hero />
@@ -29,6 +30,8 @@ export default function Home() {
         <CTA />
       </main>
       <Footer />
-    </SmoothScroll>
+      </>
+    // </SmoothScroll>
+    
   );
 }

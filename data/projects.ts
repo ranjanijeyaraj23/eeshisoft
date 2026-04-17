@@ -31,16 +31,22 @@ export const projects: Project[] = [
   link: "https://marketing.tronex.ai",
 
   features: [
-    "AI employees deployed across WhatsApp, Instagram, Facebook, and website chat",
-    "AI voice agents for outbound and inbound calls with 24/7 availability",
-    "Automated meeting booking and calendar management via AI agents",
-    "Multi-channel sales automation from a single unified platform",
-    "AI-powered customer support with instant response across all channels",
-    "Operations automation with intelligent workflow orchestration",
-    "5x conversion lift with AI-driven lead engagement",
-    "Global reach across 100+ countries with multilingual support",
-    "Real-time analytics dashboard for tracking agent performance and ROI",
-    "Seamless integrations with CRM, helpdesk, and third-party tools"
+    "AI Chatbot with smart replies — understands natural language, handles multi-step conversations, and responds 24/7 without human support",
+    "Automated messaging with broadcast campaigns, approved templates, offer messages, payment reminders, and festival campaigns",
+    "Lead generation & qualification — automatically collects user data, asks qualifying questions, and saves leads to CRM",
+    "Workflow automation for complete customer journeys: order tracking, appointment booking, follow-ups, and end-to-end flows",
+    "Analytics dashboard tracking messages sent/received, active contacts, campaign performance, and conversion metrics",
+    "Multi-agent live chat with seamless AI-to-human handover — AI handles simple queries, humans take complex ones",
+    "AI personalization with context-aware replies, smart product recommendations, and behavior-based responses",
+    "Sales automation with product suggestions, cart reminders, payment links, and chat-to-sale conversion flows",
+    "No-code bot builder with drag-and-drop chatbot creation — fast setup without coding",
+    "Voice AI suite: Voice Agents, Calls, Phone Numbers, and Incoming Connections for inbound & outbound call automation",
+    "Website AI: embeddable chatbot with chat settings, categories, knowledge base, chat list, and embed tokens",
+    "Social Media AI: automated posting across 7 platforms from a single dashboard",
+    "Campaign Engine for launching bulk calling and messaging campaigns at scale",
+    "Deep integrations with WhatsApp Business API, CRM systems, payment gateways, and third-party APIs",
+    "Support Tickets system and Execution Logs for auditing AI conversations and escalation workflows",
+    "Multi-workspace support with team collaboration, role-based access, and multilingual reach across 100+ countries"
   ],
 
   challenge:

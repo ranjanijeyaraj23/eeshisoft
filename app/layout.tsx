@@ -5,42 +5,138 @@ import "./globals.css";
 
 const poppins = Poppins({
   subsets: ["latin"],
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  weight: ["400", "500", "600", "700", "800", "900"],
   variable: "--font-poppins",
+  display: "swap",
+  preload: true,
 });
 
+const siteUrl = "https://eeshisoft.com";
+const siteName = "EeshiSoft";
+const siteDescription =
+  "EeshiSoft builds Web3, blockchain, AI, and decentralized application platforms — from AI lead generation and voice agents to DeFi exchanges and smart contract engineering.";
+const ogImage = "/og-image.png";
+
 export const metadata: Metadata = {
-  title: "EeshiSoft | Building the Decentralized Future",
-  description:
-    "Powering Web3 infrastructure with cutting-edge blockchain development, AI integration, and decentralized application engineering.",
+  metadataBase: new URL(siteUrl),
+  title: {
+    default: "EeshiSoft | Web3, Blockchain & AI Engineering",
+    template: "%s | EeshiSoft",
+  },
+  description: siteDescription,
+  applicationName: siteName,
+  authors: [{ name: "EeshiSoft", url: siteUrl }],
+  creator: "EeshiSoft",
+  publisher: "EeshiSoft",
+  generator: "Next.js",
+  keywords: [
+    "Web3 development",
+    "Blockchain development",
+    "AI lead generation",
+    "WhatsApp AI",
+    "Voice AI agents",
+    "DeFi platform",
+    "Smart contracts",
+    "dApps",
+    "Ethereum",
+    "Solana",
+    "Polygon",
+    "Next.js agency",
+    "AI automation",
+    "EeshiSoft",
+  ],
+  referrer: "origin-when-cross-origin",
   robots: {
     index: true,
     follow: true,
+    nocache: false,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
   },
-  // generator: "v0.app",
-  // icons: {
-  //   icon: [
-  //     {
-  //       url: "/icon-light-32x32.png",
-  //       media: "(prefers-color-scheme: light)",
-  //     },
-  //     {
-  //       url: "/icon-dark-32x32.png",
-  //       media: "(prefers-color-scheme: dark)",
-  //     },
-  //     {
-  //       url: "/icon.svg",
-  //       type: "image/svg+xml",
-  //     },
-  //   ],
-  //   apple: "/apple-icon.png",
-  // },
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: siteUrl,
+    siteName,
+    title: "EeshiSoft | Web3, Blockchain & AI Engineering",
+    description: siteDescription,
+    images: [
+      {
+        url: ogImage,
+        width: 1200,
+        height: 630,
+        alt: "EeshiSoft — Web3, Blockchain & AI Engineering",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "EeshiSoft | Web3, Blockchain & AI Engineering",
+    description: siteDescription,
+    images: [ogImage],
+    creator: "@eeshisoft",
+    site: "@eeshisoft",
+  },
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/logo.png", type: "image/png", sizes: "32x32" },
+    ],
+    apple: "/logo.png",
+    shortcut: "/favicon.ico",
+  },
+  manifest: "/site.webmanifest",
+  category: "technology",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
 };
 
 export const viewport: Viewport = {
-  themeColor: "#0A0A0A",
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#ffffff" },
+    { media: "(prefers-color-scheme: dark)", color: "#0A0A0A" },
+  ],
   width: "device-width",
   initialScale: 1,
+  maximumScale: 5,
+  colorScheme: "dark light",
+};
+
+const organizationJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: siteName,
+  url: siteUrl,
+  logo: `${siteUrl}/logo.png`,
+  description: siteDescription,
+  sameAs: [
+    "https://twitter.com/eeshisoft",
+    "https://www.linkedin.com/company/eeshisoft",
+    "https://github.com/eeshisoft",
+  ],
+};
+
+const websiteJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: siteName,
+  url: siteUrl,
+  potentialAction: {
+    "@type": "SearchAction",
+    target: `${siteUrl}/?q={search_term_string}`,
+    "query-input": "required name=search_term_string",
+  },
 };
 
 export default function RootLayout({
@@ -50,6 +146,20 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={poppins.variable}>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(organizationJsonLd),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(websiteJsonLd),
+          }}
+        />
+      </head>
       <body className="font-sans antialiased overflow-x-hidden!">
         {children}
         {/* <Analytics /> */}
