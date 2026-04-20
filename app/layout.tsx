@@ -164,6 +164,11 @@ export default function RootLayout({
       <body className="font-sans antialiased overflow-x-hidden!">
         {children}
         {/* <Analytics /> */}
+       <script>
+  CLIENT_SECRET_KEY = "75048f52-e41f-4ade-9f4d-27db64a2a755";
+  AI_CHATBOT_TOKEN = "eyJ1dWlkIjoiNzUwNDhmNTItZTQxZi00YWRlLTlmNGQtMjdkYjY0YTJhNzU1IiwiZG9tYWluIjoiZWVzaGlzb2Z0LW5pbmUudmVyY2VsLmFwcCIsInRpbWVzdGFtcCI6MTc3NjY4NTYyODQwNn0=.FKTK1YUjqQ2qMuQ1xX+VNKjU9gFjlNHhIWGJPC7iKu8=";
+</script>
+<script defer src="https://marketing.tronex.ai/chatbot/js-lib/index.js"></script>
       </body>
     </html>
   );
