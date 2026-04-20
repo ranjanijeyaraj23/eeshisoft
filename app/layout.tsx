@@ -147,6 +147,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={poppins.variable}>
       <head>
+        <meta name="google-site-verification" content="bTaA2Z9bIkm_DWS9NE1wGsmXMyV9fWaUXIdRdWyHkJQ" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

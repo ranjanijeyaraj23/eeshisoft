@@ -227,6 +227,25 @@ export default function ProjectDetail({ project }: { project: Project }) {
             ))}
           </div>
         </motion.div>
+{/* ✅ SEO Content Section (ADD HERE) */}
+<div className="max-w-4xl mx-auto mt-16 text-center">
+  <h2 className="text-2xl md:text-3xl font-bold mb-4">
+    AI Lead Generation Platform for WhatsApp Automation
+  </h2>
+  <p className="text-muted-foreground leading-relaxed mb-6">
+    Our AI-powered lead generation platform helps businesses automate WhatsApp marketing,
+    capture leads, and increase conversions using chatbot automation, CRM integration,
+    and intelligent sales workflows.
+  </p>
+
+  <h2 className="text-2xl md:text-3xl font-bold mb-4">
+    How AI Lead Generation Works
+  </h2>
+  <p className="text-muted-foreground leading-relaxed">
+    This platform uses AI chatbots to engage users, qualify leads, and automate follow-ups,
+    helping businesses scale without increasing manpower.
+  </p>
+</div>
 
         {/* CTA */}
         <motion.div
