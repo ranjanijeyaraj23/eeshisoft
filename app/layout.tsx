@@ -166,17 +166,11 @@ export default function RootLayout({
         {children}
         {/* <Analytics /> */}
 {/* Tronex Chatbot */}
-  <Script id="tronex-config" strategy="afterInteractive">
-    {`
-      window.CLIENT_SECRET_KEY = "75048f52-e41f-4ade-9f4d-27db64a2a755";
-      window.AI_CHATBOT_TOKEN = "eyJ1dWlkIjoiNzUwNDhmNTItZTQxZi00YWRlLTlmNGQtMjdkYjY0YTJhNzU1IiwiZG9tYWluIjoiZWVzaGlzb2Z0LW5pbmUudmVyY2VsLmFwcCIsInRpbWVzdGFtcCI6MTc3NjY4NTYyODQwNn0=.FKTK1YUjqQ2qMuQ1xX+VNKjU9gFjlNHhIWGJPC7iKu8=";
-    `}
-  </Script>
-
-  <Script
-    src="https://marketing.tronex.ai/chatbot/js-lib/index.js"
-    strategy="afterInteractive"
-  />
+ <script>
+  CLIENT_SECRET_KEY = "75048f52-e41f-4ade-9f4d-27db64a2a755";
+  AI_CHATBOT_TOKEN = "eyJ1dWlkIjoiNzUwNDhmNTItZTQxZi00YWRlLTlmNGQtMjdkYjY0YTJhNzU1IiwiZG9tYWluIjoiZWVzaGlzb2Z0LW5pbmUudmVyY2VsLmFwcCIsInRpbWVzdGFtcCI6MTc3Njc3NDEzOTUyOX0=.jLp6Vo8c6JLUlFv7eKcL8srduBny5ZUv3Z+jTiBJHrE=";
+</script>
+<script defer src="https://marketing.tronex.ai/chatbot/js-lib/index.js"></script>
        
       </body>
     </html>
