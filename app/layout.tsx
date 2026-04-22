@@ -3,6 +3,7 @@ import { Poppins } from "next/font/google";
 // import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 import Script from "next/script";
+import GradientBackground from "@/components/GradientBackground";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -163,8 +164,10 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className="font-sans antialiased overflow-x-hidden!">
+      <body className="font-sans antialiased overflow-x-hidden">
+        <GradientBackground>
         {children}
+</GradientBackground>
         {/* <Analytics /> */}
 {/* Tronex Chatbot */}
  <Script id="tronex-config" strategy="afterInteractive">
