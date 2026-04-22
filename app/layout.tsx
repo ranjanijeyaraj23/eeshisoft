@@ -167,11 +167,11 @@ export default function RootLayout({
         {children}
         {/* <Analytics /> */}
 {/* Tronex Chatbot */}
- <script>
+ <Script id="tronex-config" strategy="afterInteractive">
   CLIENT_SECRET_KEY = "75048f52-e41f-4ade-9f4d-27db64a2a755";
   AI_CHATBOT_TOKEN = "eyJ1dWlkIjoiNzUwNDhmNTItZTQxZi00YWRlLTlmNGQtMjdkYjY0YTJhNzU1IiwiZG9tYWluIjoiZWVzaGlzb2Z0LW5pbmUudmVyY2VsLmFwcCIsInRpbWVzdGFtcCI6MTc3Njc3NDEzOTUyOX0=.jLp6Vo8c6JLUlFv7eKcL8srduBny5ZUv3Z+jTiBJHrE=";
-</script>
-<script defer src="https://marketing.tronex.ai/chatbot/js-lib/index.js"></script>
+</Script>
+<Script defer src="https://marketing.tronex.ai/chatbot/js-lib/index.js"></Script>
        
       </body>
     </html>
