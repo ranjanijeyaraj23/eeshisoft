@@ -172,7 +172,10 @@ export default function RootLayout({
   AI_CHATBOT_TOKEN = "eyJ1dWlkIjoiNzUwNDhmNTItZTQxZi00YWRlLTlmNGQtMjdkYjY0YTJhNzU1IiwiZG9tYWluIjoiZWVzaGlzb2Z0LW5pbmUudmVyY2VsLmFwcCIsInRpbWVzdGFtcCI6MTc3Njc3NDEzOTUyOX0=.jLp6Vo8c6JLUlFv7eKcL8srduBny5ZUv3Z+jTiBJHrE=";
 </Script>
 {/* <Script defer src="https://marketing.tronex.ai/chatbot/js-lib/index.js"></Script> */}
-       
+ <Script
+  src="https://marketing.tronex.ai/chatbot/js-lib/index.js"
+  strategy="lazyOnload"
+/>      
       </body>
     </html>
   );
