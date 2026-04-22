@@ -3,7 +3,6 @@ import { Poppins } from "next/font/google";
 // import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 import Script from "next/script";
-import GradientBackground from "@/components/GradientBackground";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -164,17 +163,15 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className="font-sans antialiased overflow-x-hidden">
-        <GradientBackground>
+      <body className="font-sans antialiased overflow-x-hidden!">
         {children}
-</GradientBackground>
         {/* <Analytics /> */}
 {/* Tronex Chatbot */}
  <Script id="tronex-config" strategy="afterInteractive">
   CLIENT_SECRET_KEY = "75048f52-e41f-4ade-9f4d-27db64a2a755";
   AI_CHATBOT_TOKEN = "eyJ1dWlkIjoiNzUwNDhmNTItZTQxZi00YWRlLTlmNGQtMjdkYjY0YTJhNzU1IiwiZG9tYWluIjoiZWVzaGlzb2Z0LW5pbmUudmVyY2VsLmFwcCIsInRpbWVzdGFtcCI6MTc3Njc3NDEzOTUyOX0=.jLp6Vo8c6JLUlFv7eKcL8srduBny5ZUv3Z+jTiBJHrE=";
 </Script>
-<Script defer src="https://marketing.tronex.ai/chatbot/js-lib/index.js"></Script>
+{/* <Script defer src="https://marketing.tronex.ai/chatbot/js-lib/index.js"></Script> */}
        
       </body>
     </html>
