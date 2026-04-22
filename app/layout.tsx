@@ -146,7 +146,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={poppins.variable}>
+    // <html lang="en" className={poppins.variable}>
+    <html lang="en" className={`dark ${poppins.variable}`}>
       <head>
         <meta name="google-site-verification" content="bTaA2Z9bIkm_DWS9NE1wGsmXMyV9fWaUXIdRdWyHkJQ" />
         <script
